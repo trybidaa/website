@@ -3,10 +3,11 @@ import Logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 
-export const Button = ({ children, bgColor }) => {
+export const Button = ({ children, bgColor, ...prop }) => {
   return (
     <button
-      className={`hidden md:block px-8 text-white py-3 rounded-md ${bgColor}`}
+      className={`hidden md:block px-8 text-white py-3 rounded-md  ${bgColor} ${prop.classname}`}
+      {...prop}
     >
       {children}
     </button>

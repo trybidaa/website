@@ -4,6 +4,7 @@ import Goal from '../components/goal/Goal';
 import Hero from '../components/Hero/Hero';
 import Market from '../components/product/Market';
 import ProductX from '../components/product/ProductX';
+import WaitListForm from '../components/waitlist/WaitListForm';
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Goal />
       <ProductX />
       <Market />
+      <WaitListForm />
     </div>
   );
 };
