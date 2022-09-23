@@ -8,7 +8,7 @@ const ProductX = () => {
       <div>
         <img src={Desk} alt="desk" />
       </div>
-      <div className="font-light px-20 py-10">
+      <div className="font-light md:px-20 py-10">
         <h2 className="text-4xl font-semibold">ProductX</h2>
         <div className="py-8">
           <p className="py-4">

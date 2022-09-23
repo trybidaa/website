@@ -5,8 +5,8 @@ import { Button } from '../navigation/Navigation';
 
 const Market = () => {
   return (
-    <Container>
-      <div className="font-light px-20 py-10">
+    <Container reverse={true}>
+      <div className="font-light md:px-20 py-10 order-2 md:order-1">
         <h2 className="text-4xl font-semibold">Bidhaa Market</h2>
         <div className="py-8">
           <p className="py-4">
@@ -25,7 +25,7 @@ const Market = () => {
           </Button>
         </div>
       </div>
-      <div>
+      <div className="order-2 md:order-1">
         <img src={Chart} alt="desk" />
       </div>
     </Container>

@@ -6,18 +6,23 @@ import { Transition } from '@headlessui/react';
 export const Button = ({ children, bgColor, ...prop }) => {
   return (
     <button
-      className={`hidden md:block px-8 text-white py-3 rounded-md  ${bgColor} ${prop.classname}`}
+      className={`md:block px-8 text-white py-3 rounded-md  ${bgColor} ${
+        prop.classname && prop.classname
+      }`}
       {...prop}
     >
       {children}
     </button>
   );
 };
+<Link to="/">
+  <img className="h-12 w-24" src={Logo} alt="Logo" />
+</Link>;
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-2">
+    <div className="py-4">
       <nav>
         <div>
           <div className="flex items-center justify-between h-16">
