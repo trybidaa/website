@@ -1,6 +1,5 @@
 import React from 'react';
 import Emoji from '../Emoji/Emoji';
-import Navigation from '../navigation/Navigation';
 import './styles.scss';
 import Typewriter from 'typewriter-effect';
 import Icon1 from '../../assets/images/small-1.png';

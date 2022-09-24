@@ -19,7 +19,7 @@ export const Button = ({ children, bgColor, ...prop }) => {
   <img className="h-12 w-24" src={Logo} alt="Logo" />
 </Link>;
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
   // sticky top-0 z-50
   return (
     <div className="py-4 fixed w-full text-white px-12 ">
