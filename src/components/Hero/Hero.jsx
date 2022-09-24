@@ -13,7 +13,7 @@ const Hero = () => {
     <div className="hero h-screen px-4 sm:px-6 lg:px-8 relative">
       <div className="flex items-center relative justify-center w-full h-full">
         <div className="hero__content px-8 md:px-[10rem]  w-full relative  h-[80%] grid place-content-center">
-          <h1 className="hero__title border min-h-[80px] md:min-h-[100px]  block text-2xl md:text-4xl text-center font-light">
+          <h1 className="hero__title  min-h-[80px] md:min-h-[100px]  block text-2xl md:text-4xl text-center font-light">
             <Emoji aria-label="waving-hand" symbol="👋" label="waving hand" />{' '}
             Hey,
             <div>
