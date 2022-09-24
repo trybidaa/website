@@ -7,6 +7,7 @@ module.exports = {
         'bidhaa-gray': '#444444',
         'bidhaa-blue': '#10002B',
         'bidhaa-gray-light': '#FAFAFA',
+        'bidhaa-gray-text': '#BBBBBB',
       },
     },
   },

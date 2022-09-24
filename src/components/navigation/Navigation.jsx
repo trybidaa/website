@@ -20,9 +20,9 @@ export const Button = ({ children, bgColor, ...prop }) => {
 </Link>;
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  // sticky top-0 z-50
   return (
-    <div className="py-4">
+    <div className="py-4 fixed w-full text-white px-12 ">
       <nav>
         <div>
           <div className="flex items-center justify-between h-16">
