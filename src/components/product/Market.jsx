@@ -21,7 +21,7 @@ const Market = () => {
           </p>
 
           <Button bgColor="bg-bidhaa-blue">
-            <a href="#waitList">Join Waitlist</a>
+            <a href="#wait-list">Join Waitlist</a>
           </Button>
         </div>
       </div>

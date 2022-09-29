@@ -17,7 +17,7 @@ const WaitListForm = () => {
     console.log(form);
   };
   return (
-    <div className="md:px-32 ">
+    <div id="wait-list" className="md:px-32 ">
       <div className="py-8 px-8 bg-bidhaa-purple mx-auto text-center">
         <div className="text-center grid place-items-center">
           <p className="text-white text-2xl md:text-4xl md:max-w-[55%] tracking-normal md:tracking-wide">
@@ -40,7 +40,7 @@ const WaitListForm = () => {
             />
             <Button
               bgColor={'bg-bidhaa-gray-light'}
-              classname="text-black py-2"
+              otherstyle="text-black py-2"
             >
               Subscribe
             </Button>

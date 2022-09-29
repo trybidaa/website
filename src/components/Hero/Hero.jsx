@@ -11,8 +11,8 @@ const Hero = () => {
   return (
     <div className="hero h-screen px-4 sm:px-6 lg:px-8 relative">
       <div className="flex items-center relative justify-center w-full h-full">
-        <div className="hero__content px-8 md:px-[10rem]  w-full relative  h-[80%] grid place-content-center">
-          <h1 className="hero__title  min-h-[80px] md:min-h-[100px]  block text-2xl md:text-4xl text-center font-light">
+        <div className="hero__content max-w-3xl w-full relative  h-[80%] grid place-content-center">
+          <h1 className="hero__title  min-h-[80px] md:min-h-[130px]  block text-2xl md:text-5xl text-center font-light">
             <Emoji aria-label="waving-hand" symbol="👋" label="waving hand" />{' '}
             Hey,
             <div>
@@ -26,7 +26,7 @@ const Hero = () => {
               />
             </div>
           </h1>
-          <p className="text-bidhaa-gray py-4 text-center">
+          <p className="text-bidhaa-gray py-4 md:text-xl text-center">
             Ideate your next Africa-based digital product to live with Bidhaa
           </p>
           <img
@@ -40,12 +40,12 @@ const Hero = () => {
             alt="icon-2"
           />
           <img
-            className="absolute bottom-10 md:bottom-32 left-10 md:left-20 h-20 w-20"
+            className="absolute bottom-10 md:bottom-20 left-10 md:left-20 h-20 w-20"
             src={Icon3}
             alt="icon-3"
           />
           <img
-            className="absolute bottom-10 md:bottom-32 right-10 md:right-20 h-20 w-20"
+            className="absolute bottom-10 md:bottom-20 right-10 md:right-20 h-20 w-20"
             src={Icon4}
             alt="icon-4"
           />

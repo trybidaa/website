@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <p>© Copyright {new Date().getFullYear()} Bidhaa Ltd.</p>
+        <p>© Copyright {new Date().getFullYear()} Trybidhaa</p>
         <div>
           <img className="" src={Deckdash} alt="Deckdash" />
         </div>

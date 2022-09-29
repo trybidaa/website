@@ -6,8 +6,8 @@ import { Transition } from '@headlessui/react';
 export const Button = ({ children, bgColor, ...prop }) => {
   return (
     <button
-      className={`md:block px-8 text-white py-3 rounded-md  ${bgColor} ${
-        prop.classname && prop.classname
+      className={`md:block z-30 px-4 md:px-8 text-white py-3 rounded-md  ${bgColor} ${
+        prop.otherstyle && prop.otherstyle
       }`}
       {...prop}
     >
@@ -16,13 +16,13 @@ export const Button = ({ children, bgColor, ...prop }) => {
   );
 };
 <Link to="/">
-  <img className="h-12 w-24" src={Logo} alt="Logo" />
+  <img className="h-12 md:w-24" src={Logo} alt="Logo" />
 </Link>;
 const Navigation = () => {
   const [isOpen] = useState(false);
   // sticky top-0 z-50
   return (
-    <div className="py-4 fixed w-full text-white px-12 ">
+    <div className="py-2 fixed w-full text-black bg-white px-4 md:px-12 ">
       <nav>
         <div>
           <div className="flex items-center justify-between h-16">
@@ -43,7 +43,7 @@ const Navigation = () => {
 
             <div>
               <Button bgColor="bg-bidhaa-purple">
-                <a href="#waitList">Join Waitlist</a>
+                <a href="#wait-list">Join Waitlist</a>
               </Button>
               {/* <button className="hidden md:block px-8 text-white py-3 rounded-md bg-bidhaa-purple"></button> */}
             </div>

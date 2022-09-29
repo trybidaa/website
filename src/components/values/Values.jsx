@@ -18,7 +18,7 @@ const cardValues = [
     info: 'Lots of challenges to be solved by product teams',
   },
   {
-    id: 1,
+    id: 3,
     image: Product,
     heading: 'Poor Community',
     info: 'Limited innovation and support of sectors & their players',
