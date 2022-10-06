@@ -1,7 +1,37 @@
 import React from 'react';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Button } from '../navigation/Navigation';
 
 const WaitListForm = () => {
+  // const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
+  const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
+
+  return (
+    <div id="wait-list" className="md:px-32 ">
+      <div className="py-8 px-8 bg-bidhaa-purple mx-auto text-center">
+        <div className="text-center grid place-items-center">
+          <p className="text-white text-2xl md:text-4xl md:max-w-[55%] tracking-normal md:tracking-wide">
+            Be the first to know about Bidhaa's next move'
+          </p>
+        </div>
+        <div className="grid place-items-center my-4">
+          <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+              <CustomForm
+                status={status}
+                message={message}
+                onValidated={(formData) => subscribe(formData)}
+              />
+            )}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CustomForm = ({ status, message, onValidated }) => {
   const formValues = {
     email: '',
   };
@@ -12,41 +42,45 @@ const WaitListForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
+
+    onValidated({
+      EMAIL: form.email,
+      MERGE0: form.email,
+    });
+
+    if (status === 'success') {
+      setForm(formValues);
+    }
   };
   return (
-    <div id="wait-list" className="md:px-32 ">
-      <div className="py-8 px-8 bg-bidhaa-purple mx-auto text-center">
-        <div className="text-center grid place-items-center">
-          <p className="text-white text-2xl md:text-4xl md:max-w-[55%] tracking-normal md:tracking-wide">
-            Be the first to know about Bidhaa's next move'
-          </p>
-        </div>
-        <div className="grid place-items-center my-4">
-          <form
-            onSubmit={handleSubmit}
-            className="gap-4 flex items-center justify-center md:w-[50%]"
-          >
-            <input
-              onChange={handleFormChange}
-              name="email"
-              value={form.email}
-              type="text"
-              placeholder="Your Email"
-              required
-              className="w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-            <Button
-              bgColor={'bg-bidhaa-gray-light'}
-              otherstyle="text-black py-2"
-            >
-              Subscribe
-            </Button>
-          </form>
-        </div>
-      </div>
+    <div>
+      {status === 'sending' && <div>sending...</div>}
+      {status === 'error' && (
+        <div
+          style={{ color: 'red' }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === 'success' && <div className="text-white">Subscribed !</div>}
+      <form
+        onSubmit={handleSubmit}
+        className="gap-4 flex items-center justify-center"
+      >
+        <input
+          onChange={handleFormChange}
+          name="email"
+          value={form.email}
+          type="text"
+          placeholder="Your Email"
+          required
+          className="w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+        <Button bgColor={'bg-bidhaa-gray-light'} otherstyle="text-black py-2">
+          Subscribe
+        </Button>
+      </form>
     </div>
   );
 };

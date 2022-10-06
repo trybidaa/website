@@ -40,8 +40,12 @@ const Values = () => {
         </div>
         <div className="col-span-1  md:col-span-2 ">
           <div className="grid md:mx-8 md:grid-cols-2 gap-8 justify-around">
-            {cardValues.map((card) => (
-              <Card key={card.id} card={card} />
+            {cardValues.map((card, idx) => (
+              <Card
+                data-aos={idx % 2 === 0 ? 'zoom-in-left' : 'zoom-in-right'}
+                key={card.id}
+                card={card}
+              />
             ))}
           </div>
         </div>
@@ -51,3 +55,7 @@ const Values = () => {
 };
 
 export default Values;
+
+// ction = 'https://trybidhaa.us8.list-manage.com/subscribe/post';
+// <input type="hidden" name="u" value="4cec82a7d62bed175dddae05c">
+// <input type="hidden" name="id" value="5a42fc8327"></input>

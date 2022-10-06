@@ -19,10 +19,10 @@ export const Button = ({ children, bgColor, ...prop }) => {
   <img className="h-12 md:w-24" src={Logo} alt="Logo" />
 </Link>;
 const Navigation = () => {
-  const [isOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   // sticky top-0 z-50
   return (
-    <div className="py-2 fixed w-full text-black bg-white px-4 md:px-12 ">
+    <div className="py-2 fixed w-full text-black bg-white px-4 md:px-12  z-[1000]">
       <nav>
         <div>
           <div className="flex items-center justify-between h-16">
@@ -41,11 +41,10 @@ const Navigation = () => {
               </div>
             </div>
 
-            <div>
+            <div className="hidden md:block">
               <Button bgColor="bg-bidhaa-purple">
                 <a href="#wait-list">Join Waitlist</a>
               </Button>
-              {/* <button className="hidden md:block px-8 text-white py-3 rounded-md bg-bidhaa-purple"></button> */}
             </div>
             <div className="-mr-2 flex md:hidden">
               <button
@@ -55,6 +54,7 @@ const Navigation = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 <span className="sr-only">Open main menu</span>
 
@@ -98,6 +98,7 @@ const Navigation = () => {
 
         <Transition
           show={isOpen}
+          bg-bidhaa-purple
           enter="transition ease-out duration-100 transform"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"
@@ -106,14 +107,21 @@ const Navigation = () => {
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="md:hidden bg-bidhaa-purple " id="mobile-menu">
+              <div
+                onClick={() => setIsOpen(!isOpen)}
+                className="px-2 pt-2 pb-3 space-y-1 sm:px-3"
+              >
                 <Link
                   to="/about"
                   className=" text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Dashboard
+                  About
                 </Link>
+
+                <Button bgColor="bg-white text-bidhaa-purple">
+                  <a href="#wait-list">Join Waitlist</a>
+                </Button>
               </div>
             </div>
           )}
