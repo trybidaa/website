@@ -14,11 +14,11 @@ const Brainstorm = () => {
             alt="Brainstorm Rocket"
           />
         </div>
-        <div className="block py-4 text-left md:py-0 md:flex md:px-20 md:flex-col md:items-start md:justify-center">
+        <div className="block py-4 text-left md:py-0 md:flex md:px-10 md:flex-col md:items-start md:justify-center">
           <h2
             data-aos="fade-left"
             data-aos-duration="1000"
-            className="text-white text-3xl md:text-3xl md:text-justify"
+            className="text-white text-3xl md:text-3xl md:text-left"
           >
             The fastest way to brainstorm on your next product
           </h2>
@@ -27,7 +27,7 @@ const Brainstorm = () => {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-offset="300"
-            className="py-4 text-white tracking-wide text-justify font-light"
+            className="py-4 text-white tracking-wide text-left  font-light"
           >
             Bidhaa highlights digital products in Africa helping entrepreneurs
             create unique business designs & products for the right market.

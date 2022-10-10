@@ -8,23 +8,25 @@ const WaitListForm = () => {
 
   return (
     <div id="wait-list" className="md:px-32 ">
-      <div className="py-8 px-8 bg-bidhaa-purple mx-auto text-center">
+      <div className="py-8 md:px-8 bg-bidhaa-purple mx-auto text-center">
         <div className="text-center grid place-items-center">
-          <p className="text-white text-2xl md:text-4xl md:max-w-[55%] tracking-normal md:tracking-wide">
+          <p className="text-white text-2xl md:text-4xl md:max-w-md tracking-normal md:tracking-wide">
             Be the first to know about Bidhaa's next move'
           </p>
         </div>
-        <div className="grid place-items-center my-4">
-          <MailchimpSubscribe
-            url={url}
-            render={({ subscribe, status, message }) => (
-              <CustomForm
-                status={status}
-                message={message}
-                onValidated={(formData) => subscribe(formData)}
-              />
-            )}
-          />
+        <div className="mx-4 md:mx-[20%]">
+          <div className="my-4">
+            <MailchimpSubscribe
+              url={url}
+              render={({ subscribe, status, message }) => (
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={(formData) => subscribe(formData)}
+                />
+              )}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -50,9 +52,9 @@ const CustomForm = ({ status, message, onValidated }) => {
       MERGE0: form.email,
     });
 
-    if (status === 'success') {
+    setTimeout(() => {
       setForm(formValues);
-    }
+    }, [3000]);
   };
   return (
     <div>
@@ -66,7 +68,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       {status === 'success' && <div className="text-white">Subscribed !</div>}
       <form
         onSubmit={handleSubmit}
-        className="gap-4 flex items-center justify-center"
+        className="gap-1 md:gap-4 flex items-center justify-center"
       >
         <input
           onChange={handleFormChange}
@@ -75,7 +77,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           type="text"
           placeholder="Your Email"
           required
-          className="w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
         <Button bgColor={'bg-bidhaa-gray-light'} otherstyle="text-black py-2">
           Subscribe

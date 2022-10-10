@@ -26,7 +26,7 @@ const Footer = () => {
             <h4 className="text-bidhaa-blue font-bold pb-2">Company</h4>
             <h4>
               <a
-                className="text-bidhaa-gray font-light"
+                className="text-bidhaa-gray font-light hover:text-bidhaa-purple active:text-bidhaa-purple"
                 href="mailto:hello@trybidhaa.com"
               >
                 hello@trybidhaa.com
