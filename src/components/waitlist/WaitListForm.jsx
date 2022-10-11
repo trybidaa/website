@@ -3,14 +3,12 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Button } from '../navigation/Navigation';
 
 const WaitListForm = () => {
-  // const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
   const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
-
   return (
     <div id="wait-list" className="md:px-32 ">
       <div className="py-8 md:px-8 bg-bidhaa-purple mx-auto text-center">
         <div className="text-center grid place-items-center">
-          <p className="text-white text-2xl md:text-4xl md:max-w-md tracking-normal md:tracking-wide">
+          <p className="text-white px-8 text-2xl md:text-4xl md:max-w-md tracking-normal md:tracking-wide">
             Be the first to know about Bidhaa's next move'
           </p>
         </div>

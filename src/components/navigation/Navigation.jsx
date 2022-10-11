@@ -22,8 +22,8 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   // sticky top-0 z-50
   return (
-    <div className="py-2 fixed w-full text-black bg-white px-4 md:px-12  z-[1000]">
-      <nav>
+    <div className="max-w-screen  text-black">
+      <nav className="w-screen fixed py-2 z-50  bg-white px-4 md:px-12">
         <div>
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -46,14 +46,9 @@ const Navigation = () => {
                 <a href="#wait-list">Join Waitlist</a>
               </Button>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className=" md:hidden">
               <button
-                className="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
+                className="block h-6 w-6  text-bidhaa-blue"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -75,6 +70,7 @@ const Navigation = () => {
                     />
                   </svg>
                 ) : (
+                  // <p>Close</p>
                   <svg
                     className="block h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
@@ -90,6 +86,7 @@ const Navigation = () => {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
+                  // <p>OPen</p>
                 )}
               </button>
             </div>
@@ -98,7 +95,6 @@ const Navigation = () => {
 
         <Transition
           show={isOpen}
-          bg-bidhaa-purple
           enter="transition ease-out duration-100 transform"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"

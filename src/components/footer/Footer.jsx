@@ -19,14 +19,21 @@ const Footer = () => {
         <div className="mb-4 md:mb-0 md:flex gap-8">
           <div className="mb-4 md:mb-0">
             <h4 className="text-bidhaa-blue font-bold pb-2">Company</h4>
-            <h4 className="text-bidhaa-gray font-light">About Us</h4>
+            <h4 className="text-bidhaa-gray font-light ">
+              <Link
+                className="text-bidhaa-gray font-light  transition ease-in-out hover:scale-[1.2] hover:text-bidhaa-purple active:text-bidhaa-purple"
+                to="/about"
+              >
+                About
+              </Link>
+            </h4>
           </div>
 
           <div>
-            <h4 className="text-bidhaa-blue font-bold pb-2">Company</h4>
+            <h4 className="text-bidhaa-blue font-bold pb-2">Contact</h4>
             <h4>
               <a
-                className="text-bidhaa-gray font-light hover:text-bidhaa-purple active:text-bidhaa-purple"
+                className="text-bidhaa-gray font-light  transition ease-in-out hover:scale-[1.2] hover:text-bidhaa-purple active:text-bidhaa-purple"
                 href="mailto:hello@trybidhaa.com"
               >
                 hello@trybidhaa.com
@@ -53,7 +60,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center justify-between text-[#666666]">
-        <p>© Copyright {new Date().getFullYear()} Bidhaa.</p>
+        <p>© Copyright {new Date().getFullYear()} Bidhaa Ltd.</p>
         <div>
           <img className="" src={Deckdash} alt="Deckdash" />
         </div>
