@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import CustomPage from '../components/CustomPage';
 import WaitListForm from '../components/waitlist/WaitListForm';
 const About = () => {
   return (
-    <>
+    <CustomPage>
       <Helmet>
         <meta charSet="utf-8" />
         <title>TryBidhaa | About</title>
@@ -87,7 +88,7 @@ const About = () => {
           <WaitListForm />
         </div>
       </div>
-    </>
+    </CustomPage>
   );
 };
 

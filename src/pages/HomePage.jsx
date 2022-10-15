@@ -1,16 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Brainstorm from '../components/Brainstorm/Brainstorm';
+import CustomPage from '../components/CustomPage';
 import Goal from '../components/goal/Goal';
 import Hero from '../components/Hero/Hero';
 import Market from '../components/product/Market';
 import ProductX from '../components/product/ProductX';
 import Values from '../components/values/Values';
-import WaitListForm from '../components/waitlist/WaitListForm';
+import SubscriptionForm from '../components/waitlist/WaitListForm';
 
 const HomePage = () => {
   return (
-    <div>
+    <CustomPage>
       <Helmet>
         <meta charSet="utf-8" />
         <title>TryBidhaa</title>
@@ -45,8 +46,8 @@ const HomePage = () => {
         <ProductX />
         <Market />
       </div>
-      <WaitListForm />
-    </div>
+      <SubscriptionForm />
+    </CustomPage>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../container/Container';
 import Chart from '../../assets/images/bidhaa-webapp.svg';
 
-import { Button } from '../navigation/Navigation';
+import { CustomButton } from '../navigation/Navigation';
 
 const Market = () => {
   return (
@@ -27,9 +27,9 @@ const Market = () => {
             interest or expertise.
           </p>
 
-          <Button bgColor="bg-bidhaa-purple">
+          <CustomButton bgColor="bg-bidhaa-purple">
             <a href="#wait-list">Join Waitlist</a>
-          </Button>
+          </CustomButton>
         </div>
       </div>
       <div

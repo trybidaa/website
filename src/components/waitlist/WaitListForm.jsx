@@ -1,8 +1,8 @@
 import React from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { Button } from '../navigation/Navigation';
+import { CustomButton } from '../navigation/Navigation';
 
-const WaitListForm = () => {
+const SubscriptionForm = () => {
   const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
   return (
     <div id="wait-list" className="md:px-32 ">
@@ -77,12 +77,15 @@ const CustomForm = ({ status, message, onValidated }) => {
           required
           className="w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
-        <Button bgColor={'bg-bidhaa-gray-light'} otherstyle="text-black py-2">
+        <CustomButton
+          bgColor={'bg-bidhaa-gray-light'}
+          otherstyle="text-black py-2"
+        >
           Subscribe
-        </Button>
+        </CustomButton>
       </form>
     </div>
   );
 };
 
-export default WaitListForm;
+export default SubscriptionForm;

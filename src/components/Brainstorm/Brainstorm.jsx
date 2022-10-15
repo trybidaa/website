@@ -1,6 +1,6 @@
 import React from 'react';
 import Rocket from '../../assets/images/rocket.svg';
-import { Button } from '../navigation/Navigation';
+import { CustomButton } from '../navigation/Navigation';
 
 const Brainstorm = () => {
   return (
@@ -32,7 +32,7 @@ const Brainstorm = () => {
             Bidhaa highlights digital products in Africa helping entrepreneurs
             create unique business designs & products for the right market.
           </p>
-          <Button
+          <CustomButton
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -40,7 +40,7 @@ const Brainstorm = () => {
             bgColor="bg-bidhaa-purple"
           >
             <a href="#waitList">Get on board</a>
-          </Button>
+          </CustomButton>
         </div>
       </div>
     </div>

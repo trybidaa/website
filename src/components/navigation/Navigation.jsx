@@ -3,7 +3,7 @@ import Logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 
-export const Button = ({ children, bgColor, ...prop }) => {
+export const CustomButton = ({ children, bgColor, ...prop }) => {
   return (
     <button
       className={`md:block z-30 px-4 md:px-8 text-white py-3 rounded-md  ${bgColor} ${
@@ -15,9 +15,7 @@ export const Button = ({ children, bgColor, ...prop }) => {
     </button>
   );
 };
-<Link to="/">
-  <img className="h-12 md:w-24" src={Logo} alt="Logo" />
-</Link>;
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   // sticky top-0 z-50
@@ -42,9 +40,9 @@ const Navigation = () => {
             </div>
 
             <div className="hidden md:block">
-              <Button bgColor="bg-bidhaa-purple">
-                <a href="#wait-list">Join Waitlist</a>
-              </Button>
+              <CustomButton bgColor="bg-bidhaa-purple">
+                <Link to="/waitlist">Join Waitlist</Link>
+              </CustomButton>
             </div>
             <div className=" md:hidden">
               <button
@@ -115,9 +113,9 @@ const Navigation = () => {
                   About
                 </Link>
 
-                <Button bgColor="bg-white text-bidhaa-purple">
+                <CustomButton bgColor="bg-white text-bidhaa-purple">
                   <a href="#wait-list">Join Waitlist</a>
-                </Button>
+                </CustomButton>
               </div>
             </div>
           )}
