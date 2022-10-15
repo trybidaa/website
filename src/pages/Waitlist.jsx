@@ -32,12 +32,14 @@ const Waitlist = () => {
             <div className="h-[70px] w-[130px]">
               <img className="h-full w-full" src={Logo} alt="..." />
             </div>
-            <p>Be the first to know when we launch</p>
+            <h3 className="py-2 text-bidhaa-purple font-bold">
+              Be the first to know when we launch
+            </h3>
             <p>Please fill this form below</p>
           </div>
 
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-2 my-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 md:my-4">
               <div>
                 <label
                   className="block text-sm font-medium text-gray-700"
@@ -50,10 +52,11 @@ const Waitlist = () => {
                   id="firstName"
                   type="text"
                   name="firstName"
+                  value={formState.firstNafirstNameme}
                   className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
-              <div>
+              <div className="my-2 md:my-0">
                 <label
                   className="block text-sm font-medium text-gray-700"
                   htmlFor="lastName"
@@ -63,6 +66,7 @@ const Waitlist = () => {
                 <input
                   className="block w-full rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={handleChange}
+                  value={formState.lastName}
                   type="text"
                   name="lastName"
                 />
@@ -81,16 +85,15 @@ const Waitlist = () => {
                 onChange={handleChange}
                 type="email"
                 name="email"
-                value=""
+                value={formState.email}
               />
             </div>
+            <div className="mx-8 my-4">
+              <CustomButton bgColor="bg-bidhaa-purple" otherstyle="w-full">
+                Submit
+              </CustomButton>
+            </div>
           </form>
-          <button
-            className="text-red bg-teal-700 px-6 py-4 "
-            onClick={() => setIsOpen(true)}
-          >
-            Click to Open Modal
-          </button>
         </div>
       </div>
 
