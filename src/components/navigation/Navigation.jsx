@@ -84,7 +84,6 @@ const Navigation = () => {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                  // <p>OPen</p>
                 )}
               </button>
             </div>
@@ -114,7 +113,12 @@ const Navigation = () => {
                 </Link>
 
                 <CustomButton bgColor="bg-white text-bidhaa-purple">
-                  <a href="#wait-list">Join Waitlist</a>
+                  <Link
+                    to="/waitlist"
+                    className=" text-black block px-3 rounded-md text-base font-medium"
+                  >
+                    Join Wishlist
+                  </Link>
                 </CustomButton>
               </div>
             </div>

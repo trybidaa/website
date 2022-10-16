@@ -44,6 +44,7 @@ const Waitlist = () => {
                 <label
                   className="block text-sm font-medium text-gray-700"
                   htmlFor="fistName"
+                  aria-label="firstName"
                 >
                   First Name
                 </label>
@@ -52,14 +53,17 @@ const Waitlist = () => {
                   id="firstName"
                   type="text"
                   name="firstName"
+                  required
+                  aria-required="true"
                   value={formState.firstNafirstNameme}
-                  className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  className="blfirstNameock w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
               <div className="my-2 md:my-0">
                 <label
                   className="block text-sm font-medium text-gray-700"
                   htmlFor="lastName"
+                  aria-label="lastName"
                 >
                   Last Name
                 </label>
@@ -67,8 +71,10 @@ const Waitlist = () => {
                   className="block w-full rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={handleChange}
                   value={formState.lastName}
+                  aria-required="true"
                   type="text"
                   name="lastName"
+                  required
                 />
               </div>
             </div>
@@ -77,6 +83,7 @@ const Waitlist = () => {
               <label
                 className="block text-sm font-medium text-gray-700"
                 htmlFor="email"
+                aria-label="email"
               >
                 Email
               </label>
@@ -86,6 +93,8 @@ const Waitlist = () => {
                 type="email"
                 name="email"
                 value={formState.email}
+                aria-required="true"
+                required
               />
             </div>
             <div className="mx-8 my-4">
