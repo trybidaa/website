@@ -9,6 +9,9 @@ module.exports = {
         'bidhaa-gray-light': '#FAFAFA',
         'bidhaa-gray-text': '#BBBBBB',
       },
+      fontFamily: {
+        steradian: ['Steradian', 'sans-serif'],
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

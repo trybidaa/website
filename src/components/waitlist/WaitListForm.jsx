@@ -1,9 +1,9 @@
 import React from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { CustomButton } from '../navigation/Navigation';
+
+export const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
 
 const SubscriptionForm = () => {
-  const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
   return (
     <div id="wait-list" className="md:px-32 ">
       <div className="py-8 md:px-8 bg-bidhaa-purple mx-auto text-center">
@@ -34,26 +34,34 @@ const SubscriptionForm = () => {
 const CustomForm = ({ status, message, onValidated }) => {
   const formValues = {
     email: '',
+    fullName: '',
   };
 
   const [form, setForm] = React.useState(formValues);
+
   const handleFormChange = (e) => {
     e.preventDefault();
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    onValidated({
-      EMAIL: form.email,
-      MERGE0: form.email,
-    });
-
-    setTimeout(() => {
-      setForm(formValues);
-    }, [3000]);
+    try {
+      e.preventDefault();
+      onValidated({
+        EMAIL: form.email,
+        MERGE0: form.email,
+        MERGE1: form.fullName.split(' ')[0],
+        MERGE2: form.fullName.split(' ')[1],
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setTimeout(() => {
+        setForm(formValues);
+      }, [3000]);
+    }
   };
+
   return (
     <div>
       {status === 'sending' && <div>sending...</div>}
@@ -66,23 +74,51 @@ const CustomForm = ({ status, message, onValidated }) => {
       {status === 'success' && <div className="text-white">Subscribed !</div>}
       <form
         onSubmit={handleSubmit}
-        className="gap-1 md:gap-4 flex items-center justify-center"
+        // className="gap-1 md:gap-4 flex items-center justify-center"
       >
-        <input
-          onChange={handleFormChange}
-          name="email"
-          value={form.email}
-          type="text"
-          placeholder="Your Email"
-          required
-          className="w-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-        <CustomButton
-          bgColor={'bg-bidhaa-gray-light'}
-          otherstyle="text-black py-2"
-        >
+        <div className="block md:flex gap-4 items-center mb-2">
+          <div className="mb-4 md:m-0">
+            <label
+              className="block text-sm font-medium text-gray-700"
+              htmlFor="fistName"
+              aria-label="firstName"
+            >
+              <input
+                onChange={handleFormChange}
+                id="firstName"
+                type="text"
+                name="fullName"
+                required
+                aria-required="true"
+                placeholder="Full Name"
+                value={form.fullName}
+                className="w-full rounded-md border-gray-300 pl-4 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
+            </label>
+          </div>
+          <div>
+            <label
+              className="block text-sm font-medium text-gray-700"
+              htmlFor="email"
+              aria-label="email"
+            >
+              <input
+                onChange={handleFormChange}
+                name="email"
+                id="email"
+                value={form.email}
+                type="email"
+                placeholder="Your Email"
+                required
+                className="w-full rounded-md border-gray-300 pl-4 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
+            </label>
+          </div>
+        </div>
+
+        <button className="md:block z-30 px-4 md:px-8 text-black bg-bidhaa-gray-light text-white py-2 rounded-md">
           Subscribe
-        </CustomButton>
+        </button>
       </form>
     </div>
   );

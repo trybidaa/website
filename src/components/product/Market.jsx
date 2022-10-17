@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../container/Container';
-import Chart from '../../assets/images/bidhaa-webapp.svg';
+import MarketImage from '../../assets/images/market.png';
 
 import { CustomButton } from '../navigation/Navigation';
 
@@ -39,7 +39,7 @@ const Market = () => {
         data-aos-offset="300"
         className="order-2 md:order-1"
       >
-        <img src={Chart} alt="desk" />
+        <img src={MarketImage} alt="desk" />
       </div>
     </Container>
   );

@@ -11,7 +11,7 @@ function App() {
     AOS.init();
   }, []);
   return (
-    <div className="">
+    <div className="font-steradian">
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/about" element={<About />} />

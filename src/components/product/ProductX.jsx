@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../container/Container';
-import Desk from '../../assets/images/bidhaa-webapp.svg';
+import ProductImage from '../../assets/images/productx.png';
 
 const ProductX = () => {
   return (
@@ -11,7 +11,7 @@ const ProductX = () => {
         data-aos-easing="ease-in-out"
         // data-aos-offset="200"
       >
-        <img src={Desk} alt="desk" />
+        <img src={ProductImage} alt="desk" />
       </div>
       <div
         data-aos="fade-left"
