@@ -1,8 +1,15 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import CustomPage from '../components/CustomPage';
 import WaitListForm from '../components/waitlist/WaitListForm';
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <CustomPage>
       <Helmet>
@@ -31,7 +38,7 @@ const About = () => {
         <meta name="msapplication-TileColor" content="#00a300" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
-      <div className="bg-black text-bidhaa-gray-text min-h-screen pt-12 md:py-8">
+      <div className="bg-black text-white -text min-h-screen pt-12 md:py-8">
         <div className="heading text-center grid place-items-center md:text-2xl mt-20 md:mt-32">
           <div className="w-full md:max-w-3xl px-4 md:px-12 tracking-wide">
             <p className="px-0 md:px-12 md:tracking-wide">
@@ -84,7 +91,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div id="waitList">
+        <div className="pt-8" id="waitList">
           <WaitListForm />
         </div>
       </div>

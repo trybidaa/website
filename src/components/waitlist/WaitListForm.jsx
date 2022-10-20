@@ -114,11 +114,10 @@ const CustomForm = ({ status, message, onValidated }) => {
               />
             </label>
           </div>
+          <button className="md:block mt-4 md:mt-0  px-4 md:px-8 text-black bg-bidhaa-gray-light  py-2 rounded-md">
+            Subscribe
+          </button>
         </div>
-
-        <button className="md:block z-30 px-4 md:px-8 text-black bg-bidhaa-gray-light text-white py-2 rounded-md">
-          Subscribe
-        </button>
       </form>
     </div>
   );

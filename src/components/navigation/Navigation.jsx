@@ -6,7 +6,7 @@ import { Transition } from '@headlessui/react';
 export const CustomButton = ({ children, bgColor, ...prop }) => {
   return (
     <button
-      className={`md:block z-30 px-4 md:px-8 text-white py-3 rounded-md  ${bgColor} ${
+      className={`md:block z-30 px-4 md:px-8 text-white py-2 rounded-md  ${bgColor} ${
         prop.otherstyle && prop.otherstyle
       }`}
       {...prop}
@@ -23,8 +23,8 @@ const Navigation = () => {
     <div className="max-w-screen  text-black">
       <nav className="w-screen fixed py-2 z-50  bg-white px-4 md:px-12">
         <div>
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center ">
               <div className="flex-shrink-0">
                 <Link to="/">
                   <img className="h-12 w-24" src={Logo} alt="Logo" />

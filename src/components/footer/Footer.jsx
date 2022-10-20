@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.svg';
 import Deckdash from '../../assets/images/deckdash.svg';
-import Faceebook from '../../assets/images/facebook.svg';
+import Facebook from '../../assets/images/facebook.svg';
 import Linkedin from '../../assets/images/linkedin.svg';
 import Instagram from '../../assets/images/instagram.svg';
 import Twitter from '../../assets/images/twitter.svg';
@@ -44,22 +44,22 @@ const Footer = () => {
         <div>
           <h4 className="text-bidhaa-blue font-bold pb-2">Connect with us</h4>
           <div className="flex items-center gap-4">
-            <a href="faceboo.com">
+            <a href="https://www.instagram.com/trybidhaa">
               <img className="h-6 w-6" src={Instagram} alt="Instagram" />
             </a>
-            <a href="faceboo.com">
-              <img className="h-6 w-6" src={Faceebook} alt="Facebook" />
+            <a href="https://www.facebook.com/trybidhaa">
+              <img className="h-6 w-6" src={Facebook} alt="Facebook" />
             </a>{' '}
-            <a href="faceboo.com">
+            <a href="https://twitter.com/trybidhaa">
               <img className="h-6 w-6" src={Twitter} alt="Twitter" />
             </a>{' '}
-            <a href="faceboo.com">
+            <a href="https://www.linkedin.com/company/trybidhaa/">
               <img className="h-6 w-6" src={Linkedin} alt="Linkedin" />
             </a>{' '}
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between text-[#666666]">
+      <div className="flex items-baseline justify-between text-[#666666]">
         <p>© Copyright {new Date().getFullYear()} Bidhaa Ltd.</p>
         <div>
           <img className="" src={Deckdash} alt="Deckdash" />
