@@ -26,8 +26,10 @@ const Hero = () => {
               />
             </div>
           </h1>
-          <p className="text-bidhaa-gray py-4 md:text-xl text-center">
-            Ideate your next Africa-based digital product to live with Bidhaa
+          <p className="text-bidhaa-gray py-4 md:text-xl font-extralight font-steradian-thin text-center">
+            Ideate your next Africa-based digital
+            <br />
+            product to live with Bidhaa
           </p>
           <img
             className="absolute top-10 md:top-20 left-10 md:left-20 h-20 w-20"

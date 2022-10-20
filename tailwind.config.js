@@ -10,7 +10,8 @@ module.exports = {
         'bidhaa-gray-text': '#BBBBBB',
       },
       fontFamily: {
-        steradian: ['Steradian', 'sans-serif'],
+        steradian: ['steradian-normal', 'sans-serif'],
+        'steradian-light': ['steradian-light', 'sans-serif'],
       },
     },
   },

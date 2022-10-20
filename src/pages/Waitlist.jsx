@@ -17,10 +17,12 @@ const Waitlist = () => {
             <div className="h-[70px] w-[130px]">
               <img className="h-full w-full" src={Logo} alt="..." />
             </div>
-            <h3 className="py-2 text-bidhaa-purple font-bold">
+            <h3 className="py-2 text-bidhaa-purple text-[18px] font-[600] font-steradian">
               Be the first to know when we launch
             </h3>
-            <p>Please fill this form below</p>
+            <p className="text-[18px] font-thin font-steradian-light mt-2 mb-4">
+              Please fill this form below
+            </p>
             <MailchimpSubscribe
               url={url}
               render={({ subscribe, status, message }) => (
@@ -39,9 +41,11 @@ const Waitlist = () => {
 
       <Modal handleClose={() => setIsOpen(false)} open={isOpen}>
         <div className="grid place-items-center py-8">
-          <img src={Celebrate} alt="..." />
-          <h3 className="py-2 text-bidhaa-purple font-bold">Thank you </h3>
-          <p className="py-2">We will Notify You</p>
+          <img className="w-[150px] h-[150px]" src={Celebrate} alt="..." />
+          <h3 className="py-2 text-bidhaa-purple text-[28px] font-bold">
+            Thank you{' '}
+          </h3>
+          <p className="py-2 font-light">We will keep you notified</p>
           <CustomButton bgColor="bg-bidhaa-purple">
             <Link to="/">Back home</Link>
           </CustomButton>
@@ -51,7 +55,7 @@ const Waitlist = () => {
   );
 };
 
-const WaitListForm = ({ isOpen, setIsOpen, status, message, onValidated }) => {
+const WaitListForm = ({ isOpen, setIsOpen, onValidated }) => {
   const initialFormValues = {
     email: '',
     firstName: '',
@@ -100,7 +104,7 @@ const WaitListForm = ({ isOpen, setIsOpen, status, message, onValidated }) => {
             required
             aria-required="true"
             value={formState.firstName}
-            className="w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="w-full h-[40px] rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           />
         </div>
         <div className="my-2 md:my-0">
@@ -112,7 +116,7 @@ const WaitListForm = ({ isOpen, setIsOpen, status, message, onValidated }) => {
             Last Name
           </label>
           <input
-            className="block w-full rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="block w-full  rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 h-[40px] focus:ring-indigo-500 sm:text-sm"
             onChange={handleChange}
             value={formState.lastName}
             aria-required="true"
@@ -132,7 +136,7 @@ const WaitListForm = ({ isOpen, setIsOpen, status, message, onValidated }) => {
           Email
         </label>
         <input
-          className="block w-full rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="block w-full h-[40px] rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           onChange={handleChange}
           type="email"
           name="email"

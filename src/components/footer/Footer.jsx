@@ -60,9 +60,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-baseline justify-between text-[#666666]">
-        <p>© Copyright {new Date().getFullYear()} Bidhaa Ltd.</p>
+        <p>&copy; Copyright {new Date().getFullYear()} Bidhaa Ltd.</p>
         <div>
-          <img className="" src={Deckdash} alt="Deckdash" />
+          <a href="https://twitter.com/DeckDash">
+            <img className="" src={Deckdash} alt="Deckdash" />
+          </a>
         </div>
       </div>
     </div>

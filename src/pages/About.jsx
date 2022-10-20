@@ -55,7 +55,7 @@ const About = () => {
         <div>
           <div className="block px-8 md:grid grid-cols-3 grid-row-2 ">
             <div className="row-span-2 container col-span-1 grid ">
-              <h2 className="text-3xl md:px-20 md:mt-[10rem]">
+              <h2 className="text-4xl md:text-[80px] md:leading-[1]  md:px-20 md:mt-[10rem]">
                 Our <br className="hidden md:block" /> values
               </h2>
             </div>

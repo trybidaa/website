@@ -8,11 +8,11 @@ const SubscriptionForm = () => {
     <div id="wait-list" className="md:px-32 ">
       <div className="py-8 md:px-8 bg-bidhaa-purple mx-auto text-center">
         <div className="text-center grid place-items-center">
-          <p className="text-white px-8 text-2xl md:text-4xl md:max-w-md tracking-normal md:tracking-wide">
+          <p className="text-white px-8 text-2xl md:text-[32px] md:leading-9 md:max-w-md tracking-normal md:tracking-wide">
             Be the first to know about Bidhaa's next move'
           </p>
         </div>
-        <div className="mx-4 md:mx-[20%]">
+        <div className="grid place-items-center">
           <div className="my-4">
             <MailchimpSubscribe
               url={url}

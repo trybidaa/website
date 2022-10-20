@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Steradian";
+  font-family: "steradian-normal";
   src: url("../assets/fonts/SteradianRegular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "steradian-light";
+  src: url("../assets/fonts/SteradianLight.otf") format("otf");
 }
