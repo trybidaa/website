@@ -72,10 +72,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         />
       )}
       {status === 'success' && <div className="text-white">Subscribed !</div>}
-      <form
-        onSubmit={handleSubmit}
-        // className="gap-1 md:gap-4 flex items-center justify-center"
-      >
+      <form onSubmit={handleSubmit} className="grid place-items-center">
         <div className="block md:flex gap-4 items-center mb-2">
           <div className="mb-4 md:m-0">
             <label

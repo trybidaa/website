@@ -1,3 +1,12 @@
 // @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap");
 
 @import "./tailwind.scss";
+
+.test {
+  &:before {
+    content: " ";
+    background-image: url("../assets/images/before.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

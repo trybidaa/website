@@ -32,8 +32,9 @@ const Values = () => {
         <div className="col-span-1  py-4 md:py-16">
           <h2 className="text-white text-3xl md:text-5xl tracking-wider">
             3 barriers to initial product{' '}
-            <span className="text-bidhaa-purple underline underline-offset-1">
-              Growth
+            <span className="text-[#80FFD8] before:w-[100%] before:md:w-[170px] inline-block relative before:absolute before:bg-center before:h-[20px] before:-bottom-2 test">
+              {' '}
+              Growth{' '}
             </span>{' '}
             across sectors.
           </h2>

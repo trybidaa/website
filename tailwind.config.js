@@ -8,6 +8,7 @@ module.exports = {
         'bidhaa-blue': '#10002B',
         'bidhaa-gray-light': '#FAFAFA',
         'bidhaa-gray-text': '#BBBBBB',
+        'bidhaa-green': '#80FFDB',
       },
       fontFamily: {
         steradian: ['steradian-normal', 'sans-serif'],
