@@ -5,7 +5,7 @@ export const url = `https://trybidhaa.us8.list-manage.com/subscribe/post?u=${pro
 
 const SubscriptionForm = () => {
   return (
-    <div id="wait-list" className="md:px-32 ">
+    <div id="wait-list" className="md:px-32 my-24">
       <div className="py-8 md:px-8 bg-bidhaa-purple mx-auto text-center">
         <div className="text-center grid place-items-center">
           <p className="text-white px-8 text-2xl md:text-[32px] md:leading-9 md:max-w-md tracking-normal md:tracking-wide">

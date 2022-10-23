@@ -42,10 +42,10 @@ const HomePage = () => {
       <Brainstorm />
       <Goal />
       <Values />
-      <div className="py-16">
+      {/* <div className="py-16">
         <ProductX />
         <Market />
-      </div>
+      </div> */}
       <SubscriptionForm />
     </CustomPage>
   );
