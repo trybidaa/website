@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Link } from 'react-router-dom';
-import Celebrate from '../assets/images/hurray.svg';
+import Celebrate from '../assets/images/confetti.gif';
 import Logo from '../assets/images/logo.svg';
 import Modal from '../components/Modal/Modal';
 import { CustomButton } from '../components/navigation/Navigation';
@@ -15,7 +15,9 @@ const Waitlist = () => {
         <div>
           <div className="text-center flex justify-center items-center flex-col">
             <div className="h-[70px] w-[130px]">
-              <img className="h-full w-full" src={Logo} alt="..." />
+              <Link to="/">
+                <img className="h-full w-full" src={Logo} alt="..." />
+              </Link>
             </div>
             <h3 className="py-2 text-bidhaa-purple text-[18px] font-[600] font-steradian">
               Be the first to know when we launch

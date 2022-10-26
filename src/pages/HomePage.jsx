@@ -4,8 +4,6 @@ import Brainstorm from '../components/Brainstorm/Brainstorm';
 import CustomPage from '../components/CustomPage';
 import Goal from '../components/goal/Goal';
 import Hero from '../components/Hero/Hero';
-import Market from '../components/product/Market';
-import ProductX from '../components/product/ProductX';
 import Values from '../components/values/Values';
 import SubscriptionForm from '../components/waitlist/WaitListForm';
 

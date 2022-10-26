@@ -8,12 +8,20 @@ import Instagram from '../../assets/images/instagram.svg';
 import Twitter from '../../assets/images/twitter.svg';
 
 const Footer = () => {
+  // create a function to navigate to top of page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="px-8 md:px-12 py-12 ">
       <div className="">
-        <Link to="/">
+        <div className="pointer-cursor cursor-pointer" onClick={scrollToTop}>
           <img className="h-12 w-24" src={Logo} alt="Logo" />
-        </Link>
+        </div>
       </div>
       <div className="my-6 md:flex justify-between items-center">
         <div className="mb-4 md:mb-0 md:flex gap-8">
