@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Rocket from '../../assets/images/rocket.svg';
 import { CustomButton } from '../navigation/Navigation';
 
@@ -39,7 +40,9 @@ const Brainstorm = () => {
             data-aos-offset="200"
             bgColor="bg-bidhaa-purple"
           >
-            <a href="#waitList">Get on board</a>
+            <Link className="cursor-pointer" to="waitlist">
+              Get on board
+            </Link>
           </CustomButton>
         </div>
       </div>
